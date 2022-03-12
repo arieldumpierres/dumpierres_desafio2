@@ -15,7 +15,7 @@ function NavBar() {
     
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
-  <Navbar.Brand href="#home">Essen y Amigas</Navbar.Brand>
+  <Navbar.Brand href="#home">Essen by Friends</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">

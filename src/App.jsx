@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/esm/Button'
 function App() {
   const [stock, setStock]= useState()
   const changeStock=() =>{
-    let stocking=prompt("Introduzca stock inicial");
+    let stocking=parseInt(prompt("Introduzca stock inicial"));
     setStock(stocking);
     console.log (stock,stocking)
   }

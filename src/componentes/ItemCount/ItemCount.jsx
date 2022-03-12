@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/esm/Button'
 import img from '../../img/aquacacerolacuadrada30cm.jpg'
@@ -26,7 +26,7 @@ console.log('contador inicial hardcoreado en:'+ initial);
     
     <Button variant="danger" onClick={()=>setCount(count-1)} disabled={count===1}>-</Button>{' '}
     <Button variant="secondary" onClick={()=>console.log ('Agrego a su carrito '+count +' caserola/s cuadrada/s')}>Agregar al Carrito</Button>{' '}
-    <Button variant="primary" onClick={()=>setCount(count+1)} disabled={count == stockInicial}>+</Button>{' '}
+    <Button variant="primary" onClick={()=>setCount(count+1)} disabled={count === stockInicial}>+</Button>{' '}
     
   </Card.Body>
 </Card>

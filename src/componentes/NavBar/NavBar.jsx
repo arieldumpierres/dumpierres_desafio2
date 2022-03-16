@@ -22,7 +22,7 @@ function NavBar() {
       <Nav.Link href="#features">Sobre Nosotras</Nav.Link>
       <Nav.Link href="#pricing">Sobre Essen</Nav.Link>
       <NavDropdown title="Productos" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Caserolas</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.1">Cacerolas</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Sartenes</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3">Fuentes</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.4">Biferas</NavDropdown.Item>

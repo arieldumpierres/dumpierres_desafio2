@@ -1,5 +1,26 @@
-import aqCase from "../img/aquacacerola24cm.jpg"
-
+import img1 from "../img/aquacacerolacuadrada30cm.jpg"
+import img2 from "../img/aquacacerola24cm.jpg"
+import img3 from "../img/Cacerola Aqua 20cm.jpg"
+import img4 from "../img/aquacacerola24cm.jpg"
+import img5 from "../img/Cacerola 28 Aqua.jpg"
+import img6 from "../img/aquacacerolaconmango18cm.jpg"
+import img7 from "../img/Sarten18Aquacontapadevidrio.jpg"
+import img8 from "../img/aquasarten24cm.jpg"
+import img9 from "../img/sartenconasas31cm.jpg"
+import img10 from "../img/Sartén aqua 20cm.jpg"
+import img11 from "../img/Sarten 28 Aqua.jpg"
+import img12 from "../img/chefsarten.jpg"
+import img13 from "../img/chefwok.jpg"
+import img14 from "../img/FuenteRectangular30 Aqua.jpg"
+import img15 from "../img/aquabiferaconasascm.jpg"
+import img16 from "../img/aquaflip.jpg"
+import img17 from "../img/setdebudineras2.jpg"
+import img18 from "../img/Savarin 18 rosa.jpg"
+import img19 from "../img/terrasavarin24cm2.jpg"
+import img20 from "../img/terrasavarin28cm2.jpg"
+import img21 from "../img/freidorparacacerola2.jpg"
+import img22 from "../img/vaporizadorcontapa.jpg"
+import img23 from "../img/terrasavarin24cm2.jpg"
 
 const productos = [
     {
@@ -7,7 +28,7 @@ const productos = [
       categoria: "cacerolas",
       nombre: "cacerola cuadrada 29",
       precio: 13000,
-      foto: {aqCase},
+      foto: img1,
       stock: 10,
     },
     {
@@ -15,7 +36,7 @@ const productos = [
       categoria: "cacerolas",
       nombre: "cacerola cuadrada 24",
       precio: 13000,
-      foto: "../img/aquacacerola24cm.jpg",
+      foto: img2,
       stock: 10,
     },
     {
@@ -23,7 +44,7 @@ const productos = [
       categoria: "cacerolas",
       nombre: "cacerola 20",
       precio: 13000,
-      foto: "../img/Cacerola Aqua 20cm.jpg",
+      foto: img3,
       stock: 10,
     },
     {
@@ -31,7 +52,7 @@ const productos = [
       categoria: "cacerolas",
       nombre: "cacerola 24",
       precio: 13000,
-      foto: "../aquacacerola24cm.jpg",
+      foto: img4,
       stock: 10,
     },
     {
@@ -39,7 +60,7 @@ const productos = [
       categoria: "cacerolas",
       nombre: "cacerola 28",
       precio: 13000,
-      foto: "../Cacerola 28 Aqua.jpg",
+      foto: img5,
       stock: 10,
     },
     {
@@ -47,7 +68,7 @@ const productos = [
       categoria: "cacerolas",
       nombre: "cacerola 18 con mango",
       precio: 13000,
-      foto: "../img/aquacacerolaconmango18cm.jpg",
+      foto: img6,
       stock: 10,
     },
     {
@@ -55,7 +76,7 @@ const productos = [
       categoria: "sartenes",
       nombre: "sarten 18",
       precio: 13000,
-      foto: "../img/Sarten18Aquacontapadevidrio.jpg",
+      foto: img7,
       stock: 10,
     },
     {
@@ -63,7 +84,7 @@ const productos = [
       categoria: "sartenes",
       nombre: "sarten 24",
       precio: 13000,
-      foto: "../img/aquasarten24cm.jpg",
+      foto: img8,
       stock: 10,
     },
     {
@@ -71,7 +92,7 @@ const productos = [
       categoria: "sartenes",
       nombre: "sarten 31 con asas",
       precio: 13000,
-      foto: "../img/sartenconasas31cm.jpg",
+      foto: img9,
       stock: 10,
     },
     {
@@ -79,7 +100,7 @@ const productos = [
       categoria: "sartenes",
       nombre: "sarten 20",
       precio: 13000,
-      foto: "../img/Sartén aqua 20cm.jpg",
+      foto: img10,
       stock: 10,
     },
     {
@@ -87,7 +108,7 @@ const productos = [
       categoria: "sartenes",
       nombre: "sarten 28",
       precio: 13000,
-      foto: "../img/Sarten 28 Aqua.jpg",
+      foto: img11,
       stock: 10,
     },
     {
@@ -95,7 +116,7 @@ const productos = [
       categoria: "sartenes",
       nombre: "sarten chef sensor",
       precio: 13000,
-      foto: "../img/chefsarten.jpg",
+      foto: img12,
       stock: 10,
     },
     {
@@ -103,7 +124,7 @@ const productos = [
       categoria: "sartenes",
       nombre: "wok sensor",
       precio: 13000,
-      foto: "../img/chefwok.jpg",
+      foto: img13,
       stock: 10,
     },
     {
@@ -111,7 +132,7 @@ const productos = [
       categoria: "fuentes",
       nombre: "fuente rectangular 30",
       precio: 13000,
-      foto: "../img/FuenteRectangular30 Aqua.jpg",
+      foto: img14,
       stock: 10,
     },
     {
@@ -119,14 +140,14 @@ const productos = [
       categoria: "biferas",
       nombre: "bifera con asas",
       precio: 13000,
-      foto: "../img/aquabiferaconasascm.jpg",
+      foto: img15,
       stock: 10,
     },
     { id: 16, 
       categoria: "flip", 
       nombre: "flip", 
       precio: 13000, 
-      foto: "../img/aquaflip.jpg",
+      foto: img16,
       stock: 10, 
     },
     {
@@ -134,7 +155,7 @@ const productos = [
       categoria: "complementos",
       nombre: "budineras terra x2",
       precio: 13000,
-      foto: "../img/setdebudineras2.jpg",
+      foto: img17,
       stock: 10,
     },
     {
@@ -142,7 +163,7 @@ const productos = [
       categoria: "complementos",
       nombre: "savarin 18 terra",
       precio: 13000,
-      foto: "../img/Savarin 18 rosa.jpg",
+      foto: img18,
       stock: 10,
     },
     {
@@ -150,7 +171,7 @@ const productos = [
       categoria: "complementos",
       nombre: "savarin 24 terra",
       precio: 13000,
-      foto: "../img/terrasavarin24cm2.jpg",
+      foto: img19,
       stock: 10,
     },
     {
@@ -158,7 +179,7 @@ const productos = [
       categoria: "complementos",
       nombre: "savarin 28 terra",
       precio: 13000,
-      foto: "../img/terrasavarin28cm2.jpg",
+      foto: img20,
       stock: 10,
     },
     {
@@ -166,7 +187,7 @@ const productos = [
       categoria: "complementos",
       nombre: "cestillo freidor",
       precio: 13000,
-      foto: "../img/freidorparacacerola.jpg",
+      foto: img21,
       stock: 10,
     },
     {
@@ -174,7 +195,7 @@ const productos = [
       categoria: "complementos",
       nombre: "vaporizador con tapa",
       precio: 13000,
-      foto: "../img/vaporizadorcontapa.jpg",
+      foto: img22,
       stock: 10,
     },
     {
@@ -182,7 +203,7 @@ const productos = [
       categoria: "complementos",
       nombre: "savarin 24 terra",
       precio: 13000,
-      foto: "../img/terrasavarin24cm2.jpg",
+      foto: img23,
       stock: 10,
     },
   ];

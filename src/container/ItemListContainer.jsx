@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/esm/Button";
 import Item from "../helpers/item";
 import { itemList } from "../helpers/itemList";
 

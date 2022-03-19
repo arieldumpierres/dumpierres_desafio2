@@ -3,22 +3,28 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './componentes/NavBar/NavBar';
 import ItemListContainer from './container/ItemListContainer';
 import ItemCount from './componentes/ItemCount/ItemCount';
-import ItemDetailContianer from './container/ItemDetailContainer';
+import ItemDetailContainer from './container/ItemDetailContainer';
 import './App.css'
+import Cart from './componentes/Cart/Cart';
 
 function App() {
   
 return (
-  <div className="App">
-      <NavBar />
+  <BrowserRouter>
+    <div className="App">
+    <NavBar />
+      <Routes>
+    
+        <Route path="/" element={<ItemListContainer id="saludo" saludo="No te pierdas los descuentos pagando en efectivo!"/>}/>
+        <Route path="/categoria/:id" element={<ItemListContainer id="saludo" saludo="No te pierdas los descuentos pagando en efectivo!"/>}/>
+        <Route path='/detalle/:detalleId' element={<ItemDetailContainer />}/>
+        <Route path='/cart' element={<Cart />}/>
+        <Route path='/*' element={<Navigate to='/' />} /> 
 
-      <ItemListContainer
-        id="saludo"
-        saludo="No te pierdas los descuentos pagando en efectivo!"
-      />
-   <ItemDetailContianer/>
-      <ItemCount stock={10} initial={1} />
+       </Routes>
+       <ItemCount stock={10} initial={1} />
     </div>
+    </BrowserRouter>
   );
 }
 

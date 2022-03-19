@@ -18,6 +18,7 @@ function ItemDetailContainer() {
     
     return (
         <div>
+            <h6>Detalle del Producto Seleccionado</h6>
             <ItemDetail producto={producto} />      
         </div>
     )

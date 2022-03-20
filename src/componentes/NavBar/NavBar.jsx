@@ -1,9 +1,11 @@
 import './NavBar.css'
+import { NavLink } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import Widget from '../Widgets/Widget'
+import './NavBar.css'
 
 
 
@@ -15,28 +17,32 @@ function NavBar() {
     
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
-  <Navbar.Brand href="#home">Essen by Friends</Navbar.Brand>
+  <NavLink to='/'>Essen by Friends</NavLink>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
       <Nav.Link href="#features">Sobre Nosotras</Nav.Link>
       <Nav.Link href="#pricing">Sobre Essen</Nav.Link>
       <NavDropdown title="Productos" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Cacerolas</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Sartenes</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Fuentes</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.4">Biferas</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.5">Flip</NavDropdown.Item>
+        <NavLink to="categoria/Cacerolas">Cacerolas</NavLink>
         <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.6">Complementos</NavDropdown.Item>
+        <NavLink to="categoria/Sartenes">Sartenes</NavLink>
+        <NavDropdown.Divider />
+        <NavLink to="categoria/Fuentes">Fuentes</NavLink>
+        <NavDropdown.Divider />
+        <NavLink to="categoria/Biferas">Biferas</NavLink>
+        <NavDropdown.Divider />
+        <NavLink to="categoria/Flip">Flip</NavLink>
+        <NavDropdown.Divider />
+        <NavLink to="categoria/Complementos">Complementos</NavLink>
       </NavDropdown>
     </Nav>
     <Nav>
-      <Nav.Link href="#deets">
+      <NavLink to='cart' className={({ isActive })=> isActive ? 'active' : ''} > 
       
       <Widget/>
     
-     </Nav.Link>
+     </NavLink>
       
     </Nav>
   </Navbar.Collapse>

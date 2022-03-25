@@ -1,6 +1,5 @@
 
 import Card from "react-bootstrap/Card";
-
 import { Link } from "react-router-dom"
 import Button from "react-bootstrap/esm/Button";
 
@@ -8,8 +7,9 @@ function Item({prod}) {
     return (
       <Link to={`detalle/${prod.id}`}>
          
-         
-         <Card style={{ width: "18rem" }} >
+
+        
+       <Card style={{ width: "18rem" }} >
          
                 <Card.Img variant="top" src={prod.foto} />
                 <Card.Body>
@@ -19,8 +19,8 @@ function Item({prod}) {
                   <Button variant="danger">Descripcion</Button>{" "}
                 </Card.Body>
               </Card>
-            
-          
+                          
+         
               </Link>
          
         

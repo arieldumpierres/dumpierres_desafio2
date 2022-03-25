@@ -1,10 +1,17 @@
 import Card from "react-bootstrap/Card";
+import Intercambiocart from "../Intercambio/Itercambiocart";
+import ItemCount from "../ItemCount/ItemCount";
+
 
 function ItemDetail({producto}) {
-    return (
-      <div >
 
-          <Card style={{ width: "18rem" }} >
+  const onAdd=()=>{
+    console.log()}
+    return (
+      
+      <div>
+        <center>
+         <Card style={{ width: "18rem" }} >
           <Card.Img variant="top" src={producto.foto} />
                 <Card.Body>
                   <Card.Title>{producto.nombre}</Card.Title>
@@ -13,9 +20,18 @@ function ItemDetail({producto}) {
                  
                 </Card.Body>
               </Card>
-        
-      </div>
+              </center>   
+      
+      
+              <ItemCount stock={10} initial={1} onAdd={onAdd} />
+     <Intercambiocart/>
+
+    </div>
+
+   
+    
     )
+    
   }
   
   export default ItemDetail

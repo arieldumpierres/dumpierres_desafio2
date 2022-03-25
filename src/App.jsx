@@ -22,7 +22,8 @@ return (
         <Route path='/*' element={<Navigate to='/' />} /> 
 
        </Routes>
-       <ItemCount stock={10} initial={1} />
+      
+      {/*<ItemCount stock={10} initial={1} /> */}
     </div>
     </BrowserRouter>
   );

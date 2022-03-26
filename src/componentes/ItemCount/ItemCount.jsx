@@ -1,48 +1,40 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 
+function ItemCount({ stock, onAdd }) {
+  const [count, setCount] = useState(0);
 
-function ItemCount({ stock, initial}) {
-  const [count, setCount] = useState(initial);
+  function handleIncrease() {
+    if (count < stock) {
+      setCount(count + 1);
+    }
+  }
+  function handleDecrease() {
+    if (count > 0) {
+      setCount(count - 1);
+    }
+  }
 
-   function handleIncrease(){
-    if (count< stock){
-      setCount(count+1)
-  }
-}
-function handleDecrease(){
-  if(count>initial){
-    setCount(count-1)
-  }
-}
-const onAdd=()=>{
-  console.log(count)
-}
+  const agregar = () => {
+    onAdd(count);
+  };
+
   return (
     <>
-      
-          <h2>{count}</h2>
-          <Button
-            variant="danger"
-            onClick={handleDecrease}
-            disabled={count === 1}
-          >
-            -
-          </Button>{" "}
-          <Button
-            variant="secondary"
-            onClick={onAdd}
-          >
-            Agregar al Carrito
-          </Button>{" "}
-          <Button
-            variant="primary"
-            onClick={handleIncrease}
-            disabled={count>stock}
-          >
-            +
-          </Button>{" "}
-      
+      <h2>{count}</h2>
+      <Button variant="danger" onClick={handleDecrease} disabled={count === 1}>
+        -
+      </Button>{" "}
+      <Button variant="secondary" onClick={agregar}>
+        Agregar al Carrito
+      </Button>{" "}
+      <Button
+        variant="primary"
+        onClick={handleIncrease}
+        disabled={count > stock}
+      >
+        +
+      </Button>{" "}
     </>
   );
 }

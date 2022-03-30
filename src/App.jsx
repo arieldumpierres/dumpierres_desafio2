@@ -6,11 +6,14 @@ import ItemCount from './componentes/ItemCount/ItemCount';
 import ItemDetailContainer from './container/ItemDetailContainer';
 import './App.css'
 import Cart from './componentes/Cart/Cart';
+import CartContextProvider from './Context/CartContext'
+
 
 function App() {
-  
+  console.log(CartContextProvider)
 return (
   <BrowserRouter>
+  <CartContextProvider >
     <div className="App">
     <NavBar />
       <Routes>
@@ -25,6 +28,7 @@ return (
       
       {/*<ItemCount stock={10} initial={1} /> */}
     </div>
+    </CartContextProvider>
     </BrowserRouter>
   );
 }

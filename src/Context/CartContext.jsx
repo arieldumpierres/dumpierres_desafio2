@@ -13,8 +13,8 @@ function CartContextProvider({children}) {
     const addToCart=(item)=>{
          const foundItem = cartList.find((itemToAdd)=>itemToAdd.id===item.id)
         if (foundItem){
-foundItem.cantidad = foundItem.cantidad + item.cantidad
-setCartList([...cartList])
+                        foundItem.cantidad = foundItem.cantidad + item.cantidad
+                        setCartList([...cartList])
             
         }
         else{
@@ -22,11 +22,7 @@ setCartList([...cartList])
    
         }
         
-        
-        
-   
-   
-    }
+     }
 
     
     const vaciarCarrito= () =>{

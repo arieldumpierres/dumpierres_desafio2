@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './componentes/NavBar/NavBar';
 import ItemListContainer from './container/ItemListContainer';
-import ItemCount from './componentes/ItemCount/ItemCount';
 import ItemDetailContainer from './container/ItemDetailContainer';
 import './App.css'
 import Cart from './componentes/Cart/Cart';

@@ -16,7 +16,7 @@ function ItemDetail({ producto }) {
   };
 console.log(cartList)
   return (
-    <div>
+    <div >
       <center>
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src={producto.foto} />

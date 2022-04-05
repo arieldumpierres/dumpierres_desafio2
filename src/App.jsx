@@ -20,6 +20,7 @@ return (
         <Route path="/" element={<ItemListContainer id="saludo" saludo="No te pierdas los descuentos pagando en efectivo!"/>}/>
         <Route path="/categoria/:id" element={<ItemListContainer id="saludo" saludo="No te pierdas los descuentos pagando en efectivo!"/>}/>
         <Route path='/detalle/:detalleId' element={<ItemDetailContainer />}/>
+      
         <Route path='/cart' element={<Cart />}/>
         <Route path='/*' element={<Navigate to='/' />} /> 
 

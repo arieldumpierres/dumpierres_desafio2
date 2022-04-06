@@ -1,41 +1,46 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import ItemDetail from "../componentes/ItemDetail/ItemDetail"
-import { getFetch } from "../helpers/getFetch";
-import {collection, doc, getDoc, getDocs, getFirestore} from 'firebase/firestore'
+import {doc, getDoc, getFirestore} from 'firebase/firestore'
+import Spinner from 'react-bootstrap/Spinner'
+import Button from "react-bootstrap/esm/Button";
 
 
 function ItemDetailContainer() {
+    const [loading, setLoading] = useState(true);
     const [producto, setProducto] = useState({})
-    const [prod, setProd] = useState({});
     const { detalleId } = useParams() 
     
-   {/*} useEffect(()=>{
-        getFetch
-        .then(prod => prod.find(item => item.id === detalleId))
-        .then(prod => setProducto(prod))
-        .catch(err => console.log(err))
-        .finally ()
-    }, [detalleId])
-*/}
 
-
-    useEffect(() => {
+     useEffect(() => {
         const db = getFirestore()
-        const queryDoc= doc(db,'items','detalleId')
+        const queryDoc= doc(db,'items',detalleId)
         getDoc(queryDoc)
         //.then(producto => producto.find(item => item.id === detalleId))
         .then(resp=>setProducto({id:resp.id,...resp.data()}))
         .catch(err => console.log(err))
-        .finally ()
+        .finally(()=> setLoading(false)) 
        }, [detalleId]);
     
     return (
-        <div>
-            <h6>Detalle del Producto Seleccionado</h6>
-            <ItemDetail producto={producto} />      
-        </div>
-    )
+        <>
+
+
+        <div class="d-flex flex-wrap m-5">
+          {loading ? <Button variant="info" disabled>
+           <Spinner 
+             as="span"
+             animation="border"
+             size=""
+             role="status"
+             aria-hidden="true"
+           />
+              <span className="">Cargando su Producto Seleccionado...</span>
+              </Button> : <ItemDetail producto={producto}  />}
+      </div>
+     
+        </>
+    );
 }
 
 export default ItemDetailContainer

@@ -39,7 +39,7 @@ function ItemListContainer({ saludo }) {
   return (
     <>
       <div>{saludo}</div>
-      <div class="d-flex flex-wrap m-5">
+      <div className="d-flex flex-wrap m-5">
         {loading ? (
           <Button variant="info" disabled>
             <Spinner

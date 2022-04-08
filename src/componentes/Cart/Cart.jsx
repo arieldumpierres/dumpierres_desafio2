@@ -8,6 +8,7 @@ import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useState } from "react";
 
 function Cart() {
+  
   const [id, setId] = useState(null);
   const [dataForm, setDataForm] = useState({
     nombre: "",
@@ -32,7 +33,7 @@ function Cart() {
       return { id, nombre, cantTotItem, precio };
     });
 
-    console.log(orden);
+    
 
     const db = getFirestore();
     const queryCollectionSet = collection(db, "ordenes");
@@ -46,10 +47,14 @@ function Cart() {
       ...dataForm,
       [e.target.name]: e.target.value,
     });
+
+
   };
 
+
+
   return (
-    <div class="d-flex flex-wrap m-5">
+    <div className="d-flex flex-wrap m-5">
       {id && (
         <Alert variant="success">
           <Alert.Heading>
@@ -85,20 +90,23 @@ function Cart() {
 
       {cartList.length >= 1 && (
         <>
-          <div>
+          <div className="flex-wrap m-5">
             <h3>Total de la Compra: ${sumaTotal()} </h3>
+
             <Button variant="danger" onClick={vaciarCarrito}>
               Vaciar Carrito de Compras
             </Button>
 
             <Link to="/">
-              <Button>Continuar comprando</Button>
+              <Button variant="primary">Continuar comprando</Button>
             </Link>
+
           </div>
-          <div class="d-flex flex-wrap m-5">
+          <div className="d-flex flex-wrap m-5">
             <Form onSubmit={generarOrden}>
               <h6>Para generar su compra primero complete sus datos:</h6>
               <input
+               className="form-control my-1"
                 type="text"
                 name="nombre"
                 placeholder="Ingrese su nombre"
@@ -106,15 +114,16 @@ function Cart() {
                 onChange={handleChange}
               />
               <br />
-              <input
+                <input className="form-control my-1" 
                 type="text"
                 name="telefono"
-                placeholder="Ingrese si tel."
+                placeholder="Ingrese su tel."
                 value={dataForm.telefono}
                 onChange={handleChange}
               />
               <br />
               <input
+                className="form-control my-1"
                 type="email"
                 name="email"
                 placeholder="Ingrese su email"
@@ -124,6 +133,7 @@ function Cart() {
               <br />
 
               <input
+                className="form-control my-1"
                 type="email"
                 name="email1"
                 placeholder="Para validar repita su email"
@@ -135,7 +145,8 @@ function Cart() {
               <Button
                 variant="success"
                 onClick={generarOrden}
-                disabled={dataForm.email !== dataForm.email1}
+                disabled={ (dataForm.email!==dataForm.email1)}
+                
               >
                 Confirmar Compra
               </Button>

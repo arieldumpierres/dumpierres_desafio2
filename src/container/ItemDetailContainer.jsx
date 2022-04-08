@@ -21,7 +21,7 @@ function ItemDetailContainer() {
 
   return (
     <>
-      <div class="d-flex flex-wrap m-5">
+      <div className="d-flex flex-wrap m-5">
         {loading ? (
           <Button variant="info" disabled>
             <Spinner

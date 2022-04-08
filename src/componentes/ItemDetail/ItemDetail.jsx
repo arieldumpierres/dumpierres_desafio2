@@ -5,14 +5,14 @@ import { useCartContext } from "../../Context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 
 function ItemDetail({ producto }) {
-  const [quantityItems, setQuantityItems] = useState(0);
-  const { addToCart } = useCartContext();
+  const [quantityItems, setQuantityItems] = useState(0)
+  const { addToCart } = useCartContext()
 
   const onAdd = (quantityToAdd) => {
-    console.log("agregaste", { quantityToAdd });
+    
     setQuantityItems(quantityToAdd);
-    addToCart({ ...producto, cantidad: quantityToAdd });
-  };
+    addToCart({ ...producto, cantidad: quantityToAdd })
+  }
   
   return (
     <div>

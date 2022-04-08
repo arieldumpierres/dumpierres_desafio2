@@ -1,22 +1,21 @@
 import { useState } from "react";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
-import {useCartContext} from "../../Context/CartContext";
+import { useCartContext } from "../../Context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 
 function ItemDetail({ producto }) {
-
   const [quantityItems, setQuantityItems] = useState(0);
-  const {addToCart,cartList} = useCartContext()
+  const { addToCart } = useCartContext();
 
   const onAdd = (quantityToAdd) => {
-    console.log("agregaste",{quantityToAdd});
+    console.log("agregaste", { quantityToAdd });
     setQuantityItems(quantityToAdd);
-    addToCart({...producto, cantidad: quantityToAdd})
+    addToCart({ ...producto, cantidad: quantityToAdd });
   };
-console.log(cartList)
+  
   return (
-    <div >
+    <div>
       <center>
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src={producto.foto} />

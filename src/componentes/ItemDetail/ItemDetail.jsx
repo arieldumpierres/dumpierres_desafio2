@@ -17,7 +17,7 @@ function ItemDetail({ producto }) {
   return (
     <div>
       <center>
-        <Card style={{ width: "18rem" }}>
+        <Card border="info" style={{ width: "18rem" }}>
           <Card.Img variant="top" src={producto.foto} />
           <Card.Body>
             <Card.Title>{producto.nombre}</Card.Title>

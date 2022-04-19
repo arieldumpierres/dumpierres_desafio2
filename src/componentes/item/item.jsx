@@ -5,7 +5,7 @@ import Button from "react-bootstrap/esm/Button";
 function Item({ prod }) {
   return (
     <Link to={`/detalle/${prod.id}`}>
-      <Card className="m-2" style={{ width: "18rem" }}>
+      <Card border="info" className="m-2" style={{ width: "18rem" }}>
         <Card.Img variant="top" src={prod.foto} />
         <Card.Body>
           <Card.Title>{prod.nombre}</Card.Title>

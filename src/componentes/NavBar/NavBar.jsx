@@ -1,24 +1,23 @@
-
 import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Widget from "../Widgets/Widget";
-import Image from 'react-bootstrap/Image'
-
+import Image from "react-bootstrap/Image";
 
 function NavBar() {
   return (
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <NavLink to="/"><Image  width={75}
-    height={75} src="./img/logo.png" alt="img" /></NavLink>
+          <NavLink to="/">
+            <Image width={75} height={75} src="./img/logo.png" alt="img" />
+          </NavLink>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <NavDropdown  title="Productos" id="collasible-nav-dropdown">
+              <NavDropdown title="Productos" id="collasible-nav-dropdown">
                 <NavLink to="categoria/Cacerolas">Cacerolas</NavLink>
                 <NavDropdown.Divider />
                 <NavLink to="categoria/Sartenes">Sartenes</NavLink>

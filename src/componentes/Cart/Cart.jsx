@@ -9,11 +9,10 @@ import ConfirmOrder from "../ConfirmOrder/ConfirmOrder";
 function Cart() {
   const [id, setId] = useState(null);
   const { cartList, vaciarCarrito, borraUno, sumaTotal } = useCartContext();
-  
+
   const setOrderId = (orderId) => {
     setId(orderId);
   };
-
 
   return (
     <div className="d-flex flex-wrap m-5">

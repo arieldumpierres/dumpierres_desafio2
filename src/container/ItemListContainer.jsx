@@ -34,8 +34,6 @@ function ItemListContainer({ saludo }) {
       .finally(() => setLoading(false));
   }, [id]);
 
-  
-
   return (
     <>
       <div>{saludo}</div>

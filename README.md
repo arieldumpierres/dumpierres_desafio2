@@ -1,7 +1,7 @@
 
 
 # Proyecto final curso ReactJS Dumpierres
-
+- App e-commerce basica funcional basada en componentes React, biblioteca de javascript para construir interfaces de usuario
 
 ## DEMO:  https://deft-entremet-d6bb7d.netlify.app/
 

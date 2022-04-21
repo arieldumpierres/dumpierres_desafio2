@@ -145,7 +145,7 @@ function Cart() {
               <br />
 
               <Button
-                variant="success"
+                variant="success" 
                 onClick={generarOrden}
                 disabled={
                   dataForm.email !== dataForm.email1 ||
